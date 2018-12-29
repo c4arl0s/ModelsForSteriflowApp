@@ -23,7 +23,6 @@ class Product {
     var clasification: String {
         get {
             return mark.clasification.rawValue
-            
         }
     }
     init(mark: Mark, model: String?) {
@@ -41,8 +40,9 @@ class Product {
         case sampleCoolersSampleValvesAndAccesories = "Sample Coolers, Sample Valves & Accessories"
         case cleanGasDistributionManifold = "Clean Gas Distribution Manifold"
     }
+    static var clasifications = Clasification.allCases.map { "\($0.rawValue)" }
     
-    enum Mark {
+    enum Mark: CaseIterable {
         case mk978Inline
         case mk978JD
         case mk978LF
@@ -64,6 +64,7 @@ class Product {
             case .mk16IQ: return "MK16IQ"
             }
         }
+        
         
         var description: String {
             switch self {
@@ -101,13 +102,8 @@ class Product {
             case .mk16IQ: return "positioners_for_control_valves_MK16IQ-1.jpg"
             }
         }
-        
     }
-    
-
-
-
-
+    static var marks = Mark.allCases.map { "\($0.nomenclature)" }
 }
 
 
