@@ -92,13 +92,13 @@ class Product {
         var imageToLoad: String {
             switch self {
             case .mk978Inline: return "inline_sanitary_control_valve-1.jpg"
-            case .mk978JD: return ""
-            case .mk978LF: return ""
-            case .mk978LFJD: return ""
-            case .mk978OR: return ""
-            case .jshm: return ""
-            case .mk15: return ""
-            case .mk16IQ: return ""
+            case .mk978JD: return "sanitary_control_valve_mk978jd-1.jpg"
+            case .mk978LF: return "sanitary_lowflow_control_valve_mk978LF-1.jpg"
+            case .mk978LFJD: return "sanitary_lowflow_control_valve_mk978LFJD-1.jpg"
+            case .mk978OR: return "sanitary_lowflow_control_valve_mk978OR-1.jpg"
+            case .jshm: return "hand_metering_valve_JSHM-1.jpg"
+            case .mk15: return "smart_positioners_MK15-1.jpg"
+            case .mk16IQ: return "positioners_for_control_valves_MK16IQ-1.jpg"
             }
         }
         
