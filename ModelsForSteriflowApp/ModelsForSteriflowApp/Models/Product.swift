@@ -10,24 +10,24 @@ import Foundation
 import UIKit
 
 class Product {
-    var name: Mark
+    var mark: Mark
     var description: String {
         get {
-            return name.description
+            return mark.description
         }
     }
-    var image: UIImage?
+    var image: UIImage! {
+        return UIImage(named: mark.imageToLoad)
+    }
     var model: String?
     var clasification: String {
         get {
-            return name.clasification.rawValue
+            return mark.clasification.rawValue
             
         }
-        
     }
-    init(name: Mark, image: UIImage?, model: String?) {
-        self.name = name
-        self.image = image
+    init(mark: Mark, model: String?) {
+        self.mark = mark
         self.model = model
     }
     
@@ -87,6 +87,18 @@ class Product {
             case .jshm: return Clasification.sanitaryControlValve
             case .mk15: return Clasification.sanitaryControlValve
             case .mk16IQ: return Clasification.sanitaryControlValve
+            }
+        }
+        var imageToLoad: String {
+            switch self {
+            case .mk978Inline: return "inline_sanitary_control_valve-1.jpg"
+            case .mk978JD: return ""
+            case .mk978LF: return ""
+            case .mk978LFJD: return ""
+            case .mk978OR: return ""
+            case .jshm: return ""
+            case .mk15: return ""
+            case .mk16IQ: return ""
             }
         }
         
