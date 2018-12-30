@@ -17,6 +17,8 @@ class ViewController: UIViewController {
         print(productOne.description)
         print(Product.clasifications)
         print(Product.marks)
+        print(Product.clasifications.count)
+        
         
     }
 }

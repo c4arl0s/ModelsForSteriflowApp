@@ -11,20 +11,10 @@ import UIKit
 
 class Product {
     var mark: Mark
-    var description: String {
-        get {
-            return mark.description
-        }
-    }
-    var image: UIImage! {
-        return UIImage(named: mark.imageToLoad)
-    }
+    var description: String { get { return mark.description } }
+    var image: UIImage! { return UIImage(named: mark.imageToLoad) }
     var model: String?
-    var clasification: String {
-        get {
-            return mark.clasification.rawValue
-        }
-    }
+    var clasification: String { get { return mark.clasification.rawValue }}
     init(mark: Mark, model: String?) {
         self.mark = mark
         self.model = model
