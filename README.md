@@ -1,7 +1,7 @@
 # ModelsForSteriflowApp
 Models For Steriflow App
 
-```
+``` swift
 import Foundation
 import UIKit
 
